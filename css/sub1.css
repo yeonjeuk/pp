@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.brand .brand-tit{
+  margin-bottom: 70px;
+  font-weight: 600; font-size: 30px;
+}
+.brand .brand-wrap{margin-bottom: 120px;}
+.brand .brand-wrap .ceo-tit{
+  font-weight: 600; font-size: 21px; color: #74b567;
+  margin-bottom: 45px;
+}
+.brand .brand-wrap h4{
+  font-weight: 600; font-size: 39px;
+  margin-bottom: 45px;
+}
+.brand .brand-wrap .ceo-box{display: flex; justify-content: center; align-items: center;}
+.brand .brand-wrap .ceo-box-txt p{
+  margin-bottom: 30px;
+  font-weight: 500; font-size: 18px; line-height: 1.8em; word-break: keep-all;
+}
+.brand .brand-wrap .ceo-box figure img{min-height: 300px;}
+
+@media screen and (max-width : 1200px) {
+  
+}
+@media screen and (max-width : 767px) {
+
+}

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+/*   font-family: 'Noto Sans KR'; */
+
+/* common - S - 모든 페이지에 공통으로 삽입(적용)되는 속성*/
+*{box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+img {
+  width: 100%; max-width: 100%;
+  vertical-align: top;
+}
+body{
+  word-break: break-all;  -webkit-text-size-adjust : 100%;  -webkit-font-smoothing : antialiased;
+  font:16px/1.2 'Noto Sans KR' , dotom , sans-serif; letter-spacing: -1px;
+  overflow-x: hidden
+}
+.skip-nav a{
+  width: 100%;height: 30px;
+  line-height: 30px; color: #fff; text-align: center;
+  background-color: #f90;
+  position: absolute;left: 0;top: -100px; z-index: 10000;
+}
+.skip-nav a:focus{top: 0;}
+.hide {
+  width: 0;height: 0;overflow: hidden;
+  font-size: 0; line-height: 0;text-indent: -9999px;
+  position: absolute; left: -9999px
+}
+.clearfix::after{content: ""; clear: both; display: block;}
+
+.inner{padding: 0 100px;}
+.sec{padding-top: 120px;}
+.sec-header{
+  display: flex; justify-content: center; align-items: center;
+  width: 980px;
+  margin: 0 auto;
+}
+.sec-header .sec-tit{font-weight: 700; font-size: 42px; line-height: 50px;}
+.sec-header .sec-desc{width: 306px;font-size: 19px; line-height: 32px;margin-left: 300px;}
+/* common - E -*/
+
