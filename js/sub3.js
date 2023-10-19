@@ -13,13 +13,12 @@ function renderHTML(contents) {
   let output = "";
   for (let content of contents) {
     output += `
-      <h2>${content.name}</h2>
-      <ul>
-        <li>전공 : ${content.major}</li>
-        <li>학년 : ${content.grade}</li>
-      </ul>
+        <li>
+          <h4></h4>
+          <p></p>
+        </li>
       <hr>
     `;
   }
-  document.querySelector("#result").innerHTML = output;
+  document.querySelector(".franchise-wrap").innerHTML = output;
 }

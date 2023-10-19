@@ -1,0 +1,74 @@
+.fran-wrap{margin-bottom: 75px;}
+.fran-tit{
+  margin-bottom: 70px;
+  font-weight: 600; font-size: 30px;
+}
+.fran-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.fran-list li{
+  width: 25%; height: 220px;
+  display: flex; justify-content: center; align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.fran-list li h4{
+  font-weight: 600; font-size: 21px; line-height: 45px; color: #74b567;
+}
+.fran-list li p{font-size: 14px; line-height: 21px; color: #999;}
+.fran-list li figure{
+  display: flex; justify-content: center; align-items: center;
+  width: 100px; height: 100px;
+  background-color: #ddd;
+  border-radius: 100%;
+  position: absolute; left: 50%; top: -30px;
+  transform: translate(-50%, 0);
+}
+.fran-list li figure img{width: 60px; height: 60px;}
+.fran-add{padding-top: 80px;}
+.fran-add-tit{margin-bottom: 45px;}
+.fran-add-tit h4{
+  font-weight: 600; font-size: 32px;
+  margin-bottom: 15px;
+}
+.fran-add-tit p{font-weight: 600; font-size: 17px; color: #74b567;}
+.fran-add-list{
+  display: flex; justify-content: space-between;
+  margin-bottom: 45px;
+}
+.fran-add-list .fran-list-tit{display: flex; flex-direction: column-reverse;}
+.fran-add-list .fran-list-tit h5{font-weight: 700; font-size: 17px; text-align: center;}
+.fran-add-list .fran-list-tit figure{
+  width: 150px;
+  overflow: hidden;
+}
+.fran-add-list .fran-list-tit figure img{height: 150px;}
+.fran-add-list .fran-list-txt{
+  display: flex; justify-content: space-around;
+  flex-direction: column-reverse;
+  width: 75%;
+  padding: 15px 40px;
+  border: 2px dashed #aaa;
+  border-radius: 40px;
+}
+.fran-add-list .fran-list-txt h5{
+  align-self: flex-end;
+  font-weight: 700; font-size: 24px;
+}
+.fran-add-list .fran-list-txt p{font-size: 17px; line-height: 25px; color: #777;}
+
+@media screen and (max-width : 1200px) {
+.fran-list li{width: 33%;}
+.fran-add-list{flex-direction: column; align-items: center;}
+.fran-add-list .fran-list-txt{width: 100%;}
+}
+
+@media screen and (max-width : 767px) {
+  .sub-sec-header .sub-sec-tit{font-size: 52px;}
+  .sub-sec-header .sub-depth2 li{font-size: 14px;}
+  .inner{padding: 0 10px;}
+.fran-list li{width: 50%;}
+.fran-list li h4{font-size: 17px;}
+.fran-list li p{font-size: 12px;}
+}

@@ -188,7 +188,7 @@ MAIN- E -
 /**********
 MAIN- S -
 **********/
-.visual .swiper-slide{}
+.visual .swiper-slide img{height: 400px;}
 /* MENU - S - */
 .menu .sec-header{
   /* display: flex; justify-content: center; align-items: center; */
@@ -344,6 +344,7 @@ MAIN- E -
 
 
 @media screen and (max-width : 768px) {
+  .visual .swiper-slide img{height: 250px;}
 /**********
 MAIN- S -
 **********/

@@ -12,7 +12,6 @@
   width: 100%; height: 250px;
   position: absolute; left: 0; top: 0;
   background-color: rgba(0, 0, 0, 0.6);
-
 }
 .sub-sec-header .sub-sec-tit{
   position: relative; z-index: 9;
@@ -61,8 +60,13 @@
 .sub-sec-header .sub-depth2 li:last-child::after{display: none;}
 
 @media screen and (max-width : 1200px) {
+  .sub-sec-header{padding: 0 40px;}
   
 }
 @media screen and (max-width : 767px) {
-
+  .sub-sec-header{margin-bottom: 140px;}
+  .sub-sec-header .sub-sec-tit{margin-bottom: 20px;}
+  .sub-sec-header .sub-route{display: none;}
+  .sub-sec-header .sub-depth2{font-size: 16px;}
+  .sub-sec-header .sub-depth2 li{ padding: 0 5px;}
 }

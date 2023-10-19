@@ -20,8 +20,15 @@
 .brand .brand-wrap .ceo-box figure img{min-height: 300px;}
 
 @media screen and (max-width : 1200px) {
-  
+  .brand .brand-wrap .ceo-box{flex-direction: column;}
 }
 @media screen and (max-width : 767px) {
-
+  .brand .brand-tit{
+    margin-bottom: 50px;
+    font-size: 26px;
+  }
+  .brand .brand-wrap{margin-bottom: 80px;}
+  .brand .brand-wrap .ceo-tit{font-size: 19px;}
+  .brand .brand-wrap h4{font-size: 32px;}
+  .brand .brand-wrap .ceo-box-txt p{font-size: 16px;}
 }

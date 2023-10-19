@@ -1,0 +1,79 @@
+@charset "UTF-8";
+.event{padding-bottom: 85px;}
+.event .event-header{display: flex; justify-content: center;}
+.event .event-header li{width: 250px;}
+.event .event-header li a{
+  display: flex; justify-content: center; align-items: center;
+  width: 240px; height: 50px;
+  color: #796150;
+  border: 1px solid #dddddd;
+}
+.event .event-header li.on a{
+  color: #fff;
+  border: 0;
+  background-color: #796150;
+}
+.event-content-wrap .event-content-box{
+  display: flex; justify-content: space-between;
+  flex-wrap: wrap; gap: 40px 0;
+  padding: 50px 0;
+}
+.event-content-box .event-content-list{
+  display: flex; justify-content: center;
+  width: 30%;
+}
+.event-content-box .event-content-list a{width: 100%;}
+.event-content-box .event-content-list figure{
+  overflow: hidden;
+  width: 100%; height: 265px;
+  position: relative;
+  border: 1px solid #dddddd;
+  border-bottom: none;
+}
+.event-content-list figure img{
+  width: 100%;
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50% , -50%);
+}
+.event-content-list .content-list-txt{
+  display: flex; justify-content: center; align-items: center;
+  flex-direction: column;
+  width: 100%; height: 95px;
+  border: 1px solid #dddddd;
+  line-height: 21px;
+}
+.event-content-list .content-list-txt h4{font-weight: 700; font-size: 18px; color: #555;}
+.event-content-list .content-list-txt p{color: #777;}
+
+@media screen and (max-width : 1200px) {
+  .inner {padding: 0 40px;}
+  .event-content-box .event-content-list{width: 48%;}
+}
+@media screen and (max-width : 767px) {
+  .event .event-header{flex-direction: column;}
+  .event .event-header li{width: 100%;}
+  .event .event-header li + li{display: none;}
+  .event .event-header li a{
+    display: flex; justify-content: space-between; align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    color: #796150;
+    border: 1px solid #dddddd;
+  }
+  .event .event-header li a::after{
+    content: "";
+    display: block;
+    width: 10px; height: 10px;
+    border: solid #796150;
+    border-width: 2px 2px 0 0;
+    transform: rotate(135deg);
+  }
+  .event .event-header li.on a{
+    color: #796150;
+    border: 1px solid #dddddd;
+    background-color: #fff;
+  }
+
+  .event-content-box .event-content-list{ width: 100%;}
+
+}
