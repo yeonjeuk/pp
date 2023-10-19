@@ -219,10 +219,10 @@ MAIN- S -
   /* color: #fff; */
   /* background: no-repeat center center / cover; */
 }
-.menu-box a:nth-child(1):hover .menu-list .menu-list-tit{background: none;}
+/* .menu-box a:nth-child(1):hover .menu-list .menu-list-tit{background: none;}
 .menu-box a:nth-child(2):hover .menu-list .menu-list-tit{background: none;}
 .menu-box a:nth-child(3):hover .menu-list .menu-list-tit{background: none;}
-.menu-box a:nth-child(4):hover .menu-list .menu-list-tit{background: none;}
+.menu-box a:nth-child(4):hover .menu-list .menu-list-tit{background: none;} */
 .menu .menu-box a .menu-list h4{font-size: 30px; line-height: 38px;}
 .menu .menu-box a .menu-list p{
   display: none;
