@@ -28,7 +28,7 @@ console.log(mobileDepht1)
 //querySelectorAll로 잡은 대상들은 유사배열Array.from(대상)으로 가져와야 한다.
 Array.from(mobileDepht1).forEach((eachDepht1) => {
   eachDepht1.addEventListener("click", (e) => {
-      e.preventDefault(); // a링크 기본기능 막기
+      // e.preventDefault(); // a링크 기본기능 막기
       eachDepht1.querySelector(".mobile-depth2").classList.toggle("on")
       // 내가누른 메뉴1의 자식중에 찾아서 토글해라
       eachDepht1.querySelector(".xi-angle-down-thin").classList.toggle("on")

@@ -7,6 +7,7 @@ const lat = 36.634997,
         center: new kakao.maps.LatLng(lat, lon),
         level: 7 
     }
+    
 let stanMap = new kakao.maps.Map(mapBox, mapOpt);
 
 let clustererOpt = {
