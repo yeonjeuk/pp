@@ -1,5 +1,3 @@
-// // 이지디자인컴퓨터학원 기준
-
 const lat = 36.634997,
       lon = 127.4577953;
       let mapBox = document.querySelector('#map'),
