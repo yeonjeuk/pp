@@ -131,7 +131,7 @@ header .on{background-color: #fff;}
 .mobile-tnb .mobile-tnb-login{width: 50px; text-align: center;}
 .mobile-util .mobile-wrap{
   width: 50%;
-  position: absolute; right: -110%; top: 0;
+  position: absolute; right: -100%; top: 0;
   background-color: #fff;
   transition: all 0.5s;
 }
