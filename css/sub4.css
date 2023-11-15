@@ -6,13 +6,10 @@
   overflow: hidden;
   margin-bottom: 120px;
 }
-.map-tit{display: flex;}
-.map-tit h3{
+.map-tit{
   font-weight: 700; font-size: 40px;
   padding-right: 20px;
   margin-bottom: 50px;
 }
-.map-tit button{
-  width: 120px; height: 60px;
-  
-}
+
+#map > div img{width: 13px;}

@@ -34,7 +34,7 @@
 }
 .fran-add-tit p{font-weight: 600; font-size: 17px; color: #74b567;}
 .fran-add-list{
-  display: flex; justify-content: space-between;
+  display: flex; justify-content: space-around;
   margin-bottom: 45px;
 }
 .fran-add-list .fran-list-tit{display: flex; flex-direction: column-reverse;}

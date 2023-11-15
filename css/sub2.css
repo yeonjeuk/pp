@@ -1,0 +1,217 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+.openTabVertical {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.openTabVertical .tab {
+  width: 60%;
+  height: 200px;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+}
+.tabButton {
+  width: 20%;
+  height: 200px;
+  line-height: 70px;
+  padding: 0px 16px;
+  color: #000;
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.tabButton:nth-child(1)::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background: url(../img/menu_sort_tab_0.png) no-repeat center center / cover;
+}
+.tabButton:nth-child(1).on::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background: url(../img/menu_sort_tab_0_on.png) no-repeat center center / cover;
+}
+.tabButton:nth-child(2)::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background: url(../img/menu_sort_tab_1.png) no-repeat center center / cover;
+}
+.tabButton:nth-child(2).on::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background: url(../img/menu_sort_tab_1_on.png) no-repeat center center / cover;
+}
+.tabButton:nth-child(3)::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background: url(../img/menu_sort_tab_2.png) no-repeat center center / cover;
+}
+.tabButton:nth-child(3).on::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background: url(../img/menu_sort_tab_2_on.png) no-repeat center center / cover;
+}
+.tabButton:nth-child(4)::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background: url(../img/menu_sort_tab_3.png) no-repeat center center / cover;
+}
+.tabButton:nth-child(4).on::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background: url(../img/menu_sort_tab_3_on.png) no-repeat center center / cover;
+}
+.tabButton:nth-child(5)::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background: url(../img/menu_sort_tab_4.png) no-repeat center center / cover;
+}
+.tabButton:nth-child(5).on::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background: url(../img/menu_sort_tab_4_on.png) no-repeat center center / cover;
+}
+.openTabVertical .contents {
+  width: calc(100% - 130px);
+  height: 100%;
+  padding: 10px 20px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+.contents .tabBox {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.contents .tabBox.on {
+  display: block;
+}
+.tabBox div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+  row-gap: 30px;
+}
+.tabBox div ul {
+  width: 20%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.tabBox div ul li:nth-child(2) {
+  font-weight: 700;
+  font-size: 20px;
+}
+.tabBox div ul li:nth-child(3) {
+  font-size: 14px;
+  color: #777;
+}
+.tabBox div ul li:nth-child(4) {
+  font-weight: 700;
+  color: #EF5350;
+}
+.tabBox div ul li + li {
+  margin: 10px 0;
+}
+
+@media screen and (max-width : 1200px) {
+  .openTabVertical .tab {
+    width: 80%;
+  }
+  .tabButton {
+    height: 150px;
+    font-size: 18px;
+  }
+  .openTabVertical .contents {
+    width: calc(100% - 80px);
+  }
+  .tabBox div {
+    gap: 3%;
+    row-gap: 30px;
+  }
+  .tabBox div ul {
+    width: 30%;
+  }
+  .tabBox div ul li:nth-child(2) {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width : 767px) {
+  .openTabVertical .tab {
+    width: 100%;
+    height: 100px;
+  }
+  .tabButton {
+    height: 100px;
+    font-size: 0.55em;
+  }
+  .openTabVertical .contents {
+    width: calc(100% - 40px);
+  }
+  .tabButton:nth-child(1)::before {
+    height: 30%;
+  }
+  .tabButton:nth-child(2)::before {
+    height: 30%;
+  }
+  .tabButton:nth-child(3)::before {
+    height: 30%;
+  }
+  .tabButton:nth-child(4)::before {
+    height: 30%;
+  }
+  .tabButton:nth-child(5)::before {
+    height: 30%;
+  }
+  .tabButton:nth-child(1).on::before {
+    height: 30%;
+  }
+  .tabButton:nth-child(2).on::before {
+    height: 30%;
+  }
+  .tabButton:nth-child(3).on::before {
+    height: 30%;
+  }
+  .tabButton:nth-child(4).on::before {
+    height: 30%;
+  }
+  .tabButton:nth-child(5).on::before {
+    height: 30%;
+  }
+  .tabBox div {
+    gap: 10%;
+    row-gap: 30px;
+  }
+  .tabBox div ul {
+    width: 45%;
+  }
+  .tabBox div ul li:nth-child(2) {
+    font-size: 16px;
+  }
+  .tabBox div ul li:nth-child(3) {
+    font-size: 12px;
+  }
+}
