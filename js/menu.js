@@ -41,7 +41,7 @@ function renderHTML(menu, title) { // 파라미터 1개 설정할 경우 객체�
 // 메뉴마다 fetch 콜링
 
 // json을 합치면 각 메뉴는 배열안에 배열로 삽입됨.
-fetch('/sub/menu.json')                  // 1) json 파일을 읽어온다.
+fetch('/pp/sub/menu.json')                  // 1) json 파일을 읽어온다.
   .then(response => response.json())       // 2) json 파일을 객체로 변환한다.
   .then(json => {                          // 3) 객체를 출력한다.  
     renderHTML(json[0], 'ice');
