@@ -82,9 +82,6 @@ header .on {
   align-items: center;
   justify-content: center;
 }
-
-
-.gnb:hover .depth1 > a {}
 .gnb:hover::after {
   display: block;
 }
@@ -279,13 +276,14 @@ header .on {
   padding-top: 18px;
 }
 
-.mobile-gnb .mobile-depth1 > a {
+.mobile-gnb .mobile-depth1 > span {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 21px;
   line-height: 66px;
   color: #333;
+  cursor: pointer;
 }
 .mobile-gnb .mobile-depth1 .mobile-depth2 {
   display: none;
@@ -297,7 +295,7 @@ header .on {
 .mobile-gnb .mobile-depth1 .mobile-depth2.on {
   display: block;
 }
-.mobile-gnb .mobile-depth1 > a i.on {
+.mobile-gnb .mobile-depth1 > span i.on {
   transform: rotate(180deg);
 }
 
