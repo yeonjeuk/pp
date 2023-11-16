@@ -15,7 +15,7 @@ body {
   position: relative;
   left: 0;
   top: 90px;
-  background: url(/img/sub-visual.jpg) no-repeat center center;
+  background: url(/pp/img/sub-visual.jpg) no-repeat center center;
 }
 .sub-sec-header::after {
   content: "";
