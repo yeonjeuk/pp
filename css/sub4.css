@@ -12,7 +12,21 @@
   padding-right: 20px;
   margin-bottom: 50px;
 }
-
 #map > div img {
   width: 13px;
+}
+#map div .InfoWindow.My {
+  font-weight: 700;
+
+}
+#map div .InfoWindow {
+
+  font-size: 14px;
+  line-height: 30px;
+  color: #555;
+}
+#map div {
+  width: 150px;
+  height: 30px;
+  text-align: center;
 }

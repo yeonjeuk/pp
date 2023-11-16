@@ -1,7 +1,7 @@
 let mapBox = document.querySelector('#map'),
   mapOpt = {
     center: new kakao.maps.LatLng(36.634997, 127.4577953), // 지도의 중심좌표 - 이지스퍼블리싱
-    level: 7 // 지도의 확대 레벨
+    level: 6 // 지도의 확대 레벨
   };
 
 // 지도 생성 new kakao.maps.Map(지도표시할곳, mapOpt)
@@ -16,7 +16,7 @@ if (navigator.geolocation) {
       lon = position.coords.longitude; // 경도
 
     let locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-      message = '<div>현재 위치입니다.</div>'; // 인포윈도우에 표시될 내용입니다
+      message = '<h4 class="InfoWindow My">현재 위치입니다.</h4>'; // 인포윈도우에 표시될 내용입니다
 
     // 마커와 인포윈도우를 표시합니다
     displayMarker(locPosition, message);
@@ -30,13 +30,23 @@ if (navigator.geolocation) {
 
   displayMarker(locPosition, message);
 }
+let imageSrc = 'https://cdn-icons-png.flaticon.com/512/6521/6521437.png', // 마커이미지의 주소입니다    
+  MyimageSrc = 'https://cdn-icons-png.flaticon.com/512/3710/3710297.png', // 마커이미지의 주소입니다    
+  imageSize = new kakao.maps.Size(34, 40), // 마커이미지의 크기입니다
+  imageOption = { offset: new kakao.maps.Point(17, 40) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+let markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+let markerMyImage = new kakao.maps.MarkerImage(MyimageSrc, imageSize, imageOption);
+
 // 지도에 마커와 인포윈도우를 표시하는 함수입니다
 function displayMarker(locPosition, message) {
 
   // 마커를 생성합니다
   let markerPlus = new kakao.maps.Marker({
     map: stanMap,
-    position: locPosition
+    position: locPosition,
+    image: markerMyImage
   });
 
   let iwContent = message, // 인포윈도우에 표시할 내용
@@ -49,7 +59,7 @@ function displayMarker(locPosition, message) {
   });
 
   // 인포윈도우를 마커위에 표시합니다 
-  infowindow.open(stanMap, markerPlus);
+  infowindow.open(stanMap, markerPlus, MyimageSrc);
 
   // 지도 중심좌표를 접속위치로 변경합니다
   stanMap.setCenter(locPosition);
@@ -304,16 +314,17 @@ let shopList = [
   },
 ];
 let markers = []; // 빈배열 선언
-// 스벅객체 돌면서 각 값을 이용하여 마커 생성 후 markers에 삽입
+// 돌면서 각 값을 이용하여 마커 생성 후 markers에 삽입
 for (const shop of shopList) {
   // 마커를 생성합니다
   let marker = new kakao.maps.Marker({
     map: stanMap,
-    position: shop.place
+    position: shop.place,
+    image: markerImage
   });
   // 인포윈도우에 표시할 내용
   let info = new kakao.maps.InfoWindow({
-    content: `<div class="iw">${shop.name}</div>`
+    content: `<h4 class="InfoWindow">${shop.name}</h4>`
   });
   markers.push(marker); // 매장정보를 이용해서 만든 마커를 markers 배열에 추가
 
@@ -323,7 +334,6 @@ for (const shop of shopList) {
   // 마커에서 마우스아웃하면 makeOutListener() 실행
   kakao.maps.event.addListener(marker, 'mouseout', mouseOut(info));
 }
-
 // 클로저: 함수의 리턴값이 익명함수인경우, 함수참조값을 익명함수가 땡겨쓰려할 때 사용한다.
 // 이벤트 리스너로는 클로저를 만들어 등록, 클로저를 만들어 주지 않으면 마지막 마커에만 등록됨.
 
