@@ -89,7 +89,7 @@ header .on {
 .gnb:hover .depth2 {
   display: block;
 }
-.header .inner .gnb .depth1:hover > span {
+.header .inner .gnb .depth1:hover > a {
   text-decoration: underline;
   text-underline-offset: 10px;
   color: #00a3f1;
