@@ -47,7 +47,7 @@ header .on {
   position: relative;
 }
 
-.gnb .depth1 > span {
+.gnb .depth1 > a {
   display: block;
   width: 100%;
   height: 90px;
