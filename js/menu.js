@@ -13,7 +13,7 @@ Array.from(tabButtons).forEach((eachButton, index) => {
 tabButtons[0].click();
 
 
-function renderHTML(menu, title) { // 파라미터 1개 설정할 경우 객체로 설정되어 2개로 설정하고 빽틱으로 출력
+function renderHTML(menu, title) {
   let output = "";
   for (let content of menu) {
     output += `
@@ -27,23 +27,9 @@ function renderHTML(menu, title) { // 파라미터 1개 설정할 경우 객체�
   }
   document.querySelector(`.${title}`).innerHTML = output;
 }
-
-// fetch('/sub/menu2.json')                  // 1) json 파일을 읽어온다.
-//   .then(response => response.json())       // 2) json 파일을 객체로 변환한다.
-//   .then(ice => {                          // 3) 객체를 출력한다.  
-//     renderHTML(ice, 'ice');
-//   });
-// fetch('/sub/menu3.json')
-//   .then(response => response.json())
-//   .then(dessert => {
-//     renderHTML(dessert, 'dessert');
-//   });
-// 메뉴마다 fetch 콜링
-
-// json을 합치면 각 메뉴는 배열안에 배열로 삽입됨.
-fetch('/pp/sub/menu.json')                  // 1) json 파일을 읽어온다.
-  .then(response => response.json())       // 2) json 파일을 객체로 변환한다.
-  .then(json => {                          // 3) 객체를 출력한다.  
+fetch('/pp/sub/menu.json')
+  .then(response => response.json()) 
+  .then(json => {
     renderHTML(json[0], 'ice');
     renderHTML(json[1], 'dessert');
     renderHTML(json[2], 'drink');
